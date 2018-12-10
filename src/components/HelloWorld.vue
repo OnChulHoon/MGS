@@ -1,113 +1,58 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
-          Core Docs
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://forum.vuejs.org"
-          target="_blank"
-        >
-          Forum
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://chat.vuejs.org"
-          target="_blank"
-        >
-          Community Chat
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://twitter.com/vuejs"
-          target="_blank"
-        >
-          Twitter
-        </a>
-      </li>
-      <br>
-      <li>
-        <a
-          href="http://vuejs-templates.github.io/webpack/"
-          target="_blank"
-        >
-          Docs for This Template
-        </a>
-      </li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li>
-        <a
-          href="http://router.vuejs.org/"
-          target="_blank"
-        >
-          vue-router
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vuex.vuejs.org/"
-          target="_blank"
-        >
-          vuex
-        </a>
-      </li>
-      <li>
-        <a
-          href="http://vue-loader.vuejs.org/"
-          target="_blank"
-        >
-          vue-loader
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-        >
-          awesome-vue
-        </a>
-      </li>
-    </ul>
+  <div id="form">
+    <!-- Card -->
+    <mdb-card>
+      <mdb-card-body>
+        <form>
+          <h1 class="h4 text-center py-4">Sign up</h1>
+          <div id="formInput" class="grey-text">
+            <mdb-input label="Your name" icon="user" group type="text" validate error="wrong" success="right"/>
+            <mdb-input label="Your email" icon="envelope" group type="email" validate error="wrong" success="right"/>
+            <mdb-input label="Confirm your email" icon="exclamation-triangle" group type="text" validate error="wrong" success="right"/>
+            <mdb-input label="Your password" icon="lock" group type="password" validate/>
+          </div>
+          <div class="text-center py-4 mt-3">
+            <mdb-btn color="cyan" type="submit">Register</mdb-btn>
+          </div>
+        </form>
+      </mdb-card-body>
+    </mdb-card>
+    <!-- Card -->
   </div>
 </template>
 
 <script>
+import {mdbInput, mdbBtn, mdbIcon, mdbCard, mdbCardBody, mdbCardTitle} from 'mdbvue'
+
 export default {
   name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
+  components: {
+    mdbInput,
+    mdbIcon,
+    mdbBtn,
+    mdbCard,
+    mdbCardBody,
+    mdbCardTitle
   }
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  h3 {
+    font-weight: normal;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  p {
+    color: #969696;
+    margin-bottom: 0;
+    font-size: 14px;
+  }
+  #form{
+    margin: 0 auto;
+    max-width: 400px;
+  }
+  #formInput{
+    text-align: left;
+  }
 </style>
