@@ -12,7 +12,7 @@
             <mdb-input label="Your password" icon="lock" group type="password" validate/>
           </div>
           <div class="text-center py-4 mt-3">
-            <mdb-btn color="cyan" type="submit">Register</mdb-btn>
+            <mdb-btn color="primary" type="submit">Register</mdb-btn>
           </div>
         </form>
       </mdb-card-body>
