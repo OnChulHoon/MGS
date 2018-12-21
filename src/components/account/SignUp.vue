@@ -12,17 +12,21 @@
             <mdb-input label="Your password" icon="lock" group type="password" validate/>
           </div>
           <div class="text-center py-4 mt-3">
-            <mdb-btn color="primary" type="submit">Register</mdb-btn>
+            <mdb-btn type="button" gradient="blue" rounded class="btn-block z-depth-1a">Register</mdb-btn>
           </div>
         </form>
       </mdb-card-body>
+      <mdb-modal-footer class="mx-5 pt-3 mb-1">
+        <p class="font-small grey-text d-flex justify-content-end">Have an account?
+          <a href="#" class="blue-text ml-1"> <router-link to="/account/sign-in"> Sign In</router-link></a></p>
+      </mdb-modal-footer>
     </mdb-card>
     <!-- Card -->
   </div>
 </template>
 
 <script>
-import {mdbInput, mdbBtn, mdbIcon, mdbCard, mdbCardBody, mdbCardTitle} from 'mdbvue'
+import {mdbInput, mdbBtn, mdbIcon, mdbCard, mdbCardBody, mdbCardTitle, mdbModalFooter} from 'mdbvue'
 
 export default {
   name: 'SignUp',
@@ -32,7 +36,8 @@ export default {
     mdbBtn,
     mdbCard,
     mdbCardBody,
-    mdbCardTitle
+    mdbCardTitle,
+    mdbModalFooter
   }
 }
 </script>

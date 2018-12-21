@@ -1,68 +1,53 @@
 <template>
-  <div id="form">
-    <form class="text-center border border-light p-5">
-
-      <p class="h4 mb-4">Sign In</p>
-
-      <!-- Email -->
-      <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail">
-
-      <!-- Password -->
-      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password">
-
-      <div class="d-flex justify-content-around">
-        <div>
-          <!-- Remember me -->
-          <div class="custom-control custom-checkbox">
-            <input type="checkbox" class="custom-control-input" id="defaultLoginFormRemember">
-            <label class="custom-control-label" for="defaultLoginFormRemember">Remember me</label>
-          </div>
-        </div>
-        <div>
-          <!-- Forgot password -->
-          <a href="">Forgot password?</a>
-        </div>
-      </div>
-
-      <!-- Sign in button -->
-      <button id="signInBtn" class="btn btn-info btn-block my-4" type="submit">Sign in</button>
-
-      <!-- Register -->
-      <p>Not a member?
-        <a href="">Register</a>
-      </p>
-
-      <!-- Social login -->
-      <p>or sign in with:</p>
-
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fa fa-facebook"></i>
-      </a>
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fa fa-twitter"></i>
-      </a>
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fa fa-linkedin"></i>
-      </a>
-      <a type="button" class="light-blue-text mx-2">
-        <i class="fa fa-github"></i>
-      </a>
-
-    </form>
+  <div align="center">
+        <mdb-col md="3">
+          <mdb-card>
+            <mdb-card-body class="mx-4">
+              <div class="text-center">
+                <h3 class="dark-grey-text mb-5"><strong>Sign in</strong></h3>
+              </div>
+              <mdb-input label="Your email" type="email"/>
+              <mdb-input label="Your password" type="password" containerClass="mb-0"/>
+              <p class="font-small blue-text d-flex justify-content-end pb-3">Forgot <a href="#" class="blue-text ml-1"> Password?</a></p>
+              <div class="text-center mb-3">
+                <mdb-btn type="button" gradient="blue" rounded class="btn-block z-depth-1a">Sign in</mdb-btn>
+              </div>
+              <p class="font-small dark-grey-text text-right d-flex justify-content-center mb-3 pt-2"> or Sign in with:</p>
+              <div class="row my-3 d-flex justify-content-center">
+                <mdb-btn type="button" color="white" rounded class="mr-md-3 z-depth-1a"><mdb-icon icon="facebook" class="blue-text text-center"/></mdb-btn>
+                <mdb-btn type="button" color="white" rounded class="mr-md-3 z-depth-1a"><mdb-icon icon="twitter" class="blue-text"/></mdb-btn>
+                <mdb-btn type="button" color="white" rounded class="z-depth-1a"><mdb-icon icon="google-plus" class="blue-text"/></mdb-btn>
+              </div>
+            </mdb-card-body>
+            <mdb-modal-footer class="mx-5 pt-3 mb-1">
+              <p class="font-small grey-text d-flex justify-content-end">Don't have an account?
+                <a href="#" class="blue-text ml-1"> <router-link to="/account/sign-up"> Sign Up</router-link></a></p>
+            </mdb-modal-footer>
+          </mdb-card>
+        </mdb-col>
   </div>
 </template>
 
 <script>
+import {mdbInput, mdbBtn, mdbCard, mdbCardBody, mdbIcon, mdbModalFooter, mdbCol} from 'mdbvue'
 
 export default {
-  name: 'LogIn'
+  name: 'SignIn',
+  components : {
+    mdbInput,
+    mdbBtn,
+    mdbCard,
+    mdbCardBody,
+    mdbIcon,
+    mdbModalFooter,
+    mdbCol,
+  }
 }
 </script>
 
 <style scoped>
-  #form{
+  #signInForm{
     margin: 0 auto;
-    max-width: 400px;
   }
   #signInBtn{
     background-color: #007bff;

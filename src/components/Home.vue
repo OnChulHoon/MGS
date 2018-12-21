@@ -1,9 +1,7 @@
 <template>
 
   <div align="center">
-    <br>
-    <h1>Home</h1>
-    <br>
+   <h1>Home</h1>
   </div>
 </template>
 

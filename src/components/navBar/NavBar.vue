@@ -41,7 +41,7 @@
 import {mdbNavbar, mdbNavbarNav, mdbNavbarBrand, mdbNavbarToggler, mdbNavItem, mdbDropdown, mdbDropdownToggle, mdbDropdownItem, mdbDropdownMenu, mdbIcon, mdbContainer} from 'mdbvue'
 
 export default {
-  name: 'Home',
+  name: 'NavBar',
   components: {
     mdbNavbar,
     mdbNavbarNav,
