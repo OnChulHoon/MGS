@@ -1,7 +1,7 @@
 <template>
 
-  <div align="center">
-   <h1>Home</h1>
+  <div id="home" align="center">
+    <h1 style="color: white;">Home</h1>
   </div>
 </template>
 
@@ -13,5 +13,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

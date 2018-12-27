@@ -1,29 +1,23 @@
 <template>
   <div id="app">
     <header>
-      <nav-bar2></nav-bar2>
+      <nav-bar-transparent></nav-bar-transparent>
     </header>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <br><br><br><br><br>
-    <router-view/>
+       <div id="view-background">
+         <div id="router-view">
+           <router-view />
+         </div>
+       </div>
   </div>
 </template>
 
 <script>
-//import NavBar from './components/navBar/NavBar'
-import NavBar2 from './components/navBar/NavBar2'
+import NavBarTransparent from './components/navBar/NavBarTransparent'
 
 export default {
   name: 'App',
   components:{
-    NavBar2
+    NavBarTransparent
   }
 }
 </script>
@@ -37,4 +31,15 @@ export default {
   color: #2c3e50;
   margin-top: 0;
 }
+#view-background {
+  background: url("../static/6.jpg")no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 1000px;
+  margin-top: 0;
+}
+#router-view{
+  padding-top: 100px;
+}
+
 </style>
