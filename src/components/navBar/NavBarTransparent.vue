@@ -7,8 +7,8 @@
         <mdb-navbar-nav>
           <mdb-nav-item href="#" waves-fixed>Shop</mdb-nav-item>
           <!-- Dropdown -->
-          <mdb-dropdown tag="li" class="nav-item dropdown" aria-expanded="true">
-            <mdb-dropdown-toggle tag="a" navLink color="primary" slot="toggle" waves-fixed transparent >Test View</mdb-dropdown-toggle>
+          <mdb-dropdown tag="li" class="nav-item dropdown">
+            <mdb-dropdown-toggle id="navbarDropdownMenuLink" tag="a" navLink color="primary" slot="toggle" waves-fixed transparent aria-haspopup="true" aria-expanded="true">Test View</mdb-dropdown-toggle>
             <mdb-dropdown-menu>
               <mdb-dropdown-item><router-link to="/test/slide-view1">Slide View 1</router-link></mdb-dropdown-item>
               <mdb-dropdown-item><router-link to="/test/slide-view2">Slide View 2</router-link></mdb-dropdown-item>
@@ -90,25 +90,32 @@ export default {
   .navbar .dropdown-menu a:hover {
     color: inherit !important;
   }
+  .navbar {
+    text-align: left;
+  }
   @media only screen and (max-width: 700px) {
     #navBar {
       background-color: #4285F4;
     }
   }
 
-  .intro-2 {
-    /*background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;*/
-    background-size: cover;
-  }
+/*
+    .intro-2 {
+      !*background: url("https://mdbootstrap.com/img/Photos/Others/img (40).jpg")no-repeat center center;*!
+      background-size: cover;
+    }
 
-  .navbar {
-    background-color: transparent;
-    text-align: left;
-  }
+    .navbar {
+      background-color: transparent;
+      text-align: left;
+    }
+  */
 
+/*
   .top-nav-collapse {
     background-color: #4285F4;
   }
+*/
 
 
   html,

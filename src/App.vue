@@ -32,7 +32,11 @@ export default {
   margin-top: 0;
 }
 #view-background {
-  background: url("../static/6.jpg")no-repeat center center;
+  background:
+  linear-gradient(
+    rgba(20,20,20, .5),
+    rgba(20,20,20, .5)),
+    url("../static/7.jpg")no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 1000px;
